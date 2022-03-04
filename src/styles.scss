@@ -18,3 +18,29 @@ html, body {
 body {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
 }
+
+.bg-home-a__page {
+  background-image: linear-gradient(180deg, rgba(26, 26, 26, 0) 50%, #000000 94.23%), url(assets/images/covers/home_a-cover.jpg);
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bg-home-b__page {
+  background-image: linear-gradient(360deg, rgba(26, 26, 26, 0) 20%, #000000 93.23%), url(assets/images/covers/home_b-cover.jpg);
+  background-position: top right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bg-home-a__page:before,
+.bg-home-b__page:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
