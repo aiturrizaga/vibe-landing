@@ -2,7 +2,21 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
+    "paths": {
+      "@vibe/*": [
+        "app/*"
+      ],
+      "@vibe/env/*": [
+        "environments/*"
+      ],
+      "@vibe/shared/*": [
+        "app/shared/*"
+      ],
+      "@vibe/core/*": [
+        "app/core/*"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

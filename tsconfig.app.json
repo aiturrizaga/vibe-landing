@@ -2,6 +2,21 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@vibe/*": [
+        "app/*"
+      ],
+      "@vibe/env/*": [
+        "environments/*"
+      ],
+      "@vibe/shared/*": [
+        "app/shared/*"
+      ],
+      "@vibe/core/*": [
+        "app/core/*"
+      ]
+    },
     "outDir": "./out-tsc/app",
     "types": []
   },
