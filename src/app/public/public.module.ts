@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PublicRoutingModule } from './public-routing.module';
 import { HomePage } from "@vibe/public/pages";
+import { SharedModule } from "@vibe/shared/shared.module";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { HomePage } from "@vibe/public/pages";
   ],
   imports: [
     CommonModule,
-    PublicRoutingModule
+    PublicRoutingModule,
+    SharedModule
   ]
 })
 export class PublicModule {

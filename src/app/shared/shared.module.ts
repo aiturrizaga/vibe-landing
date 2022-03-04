@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from "@vibe/shared/layouts";
+import { FooterComponent, HeaderComponent } from "@vibe/shared/layouts";
 import { PublicContainerComponent } from "@vibe/shared/containers";
 import { RouterModule } from "@angular/router";
 
@@ -8,7 +8,11 @@ import { RouterModule } from "@angular/router";
 @NgModule({
   declarations: [
     HeaderComponent,
-    PublicContainerComponent
+    PublicContainerComponent,
+    FooterComponent
+  ],
+  exports: [
+    FooterComponent
   ],
   imports: [
     CommonModule,

@@ -35,6 +35,14 @@ body {
   position: relative;
 }
 
+.bg-footer {
+  background-image: linear-gradient(180deg, rgba(26, 26, 26, 0) 0, #000000 72%);
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .bg-home-a__page:before,
 .bg-home-b__page:before {
   content: "";
