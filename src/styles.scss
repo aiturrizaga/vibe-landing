@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --vibe-primary: rgb(18, 68, 243);
+  --vibe-secondary: rgb(91, 175, 227);
+  --vibe-neutral: rgb(89, 89, 89);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+}
