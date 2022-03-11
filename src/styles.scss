@@ -97,3 +97,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.btn-primary {
+  @apply rounded-full bg-primary text-white font-medium opacity-80 hover:opacity-100 transition-opacity duration-150;
+}

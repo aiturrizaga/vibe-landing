@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConstantService } from "@vibe/shared/services";
 
 @Component({
   selector: 'vibe-footer',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() {
+  constructor(public constantService: ConstantService) {
   }
 
   ngOnInit(): void {

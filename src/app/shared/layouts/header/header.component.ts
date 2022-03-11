@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConstantService } from "@vibe/shared/services";
 
 @Component({
   selector: 'vibe-header',
@@ -9,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   open = false;
 
-  constructor() {
+  constructor(public constantService: ConstantService) {
   }
 
   ngOnInit(): void {

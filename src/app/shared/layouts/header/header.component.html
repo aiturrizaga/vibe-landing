@@ -3,9 +3,9 @@
   <div class="max-w-screen-xl py-2 px-4 mx-auto md:px-6 lg:px-8">
     <div class="block md:hidden p-2 flex flex-row items-center justify-between">
       <a routerLink="" class="text-lg text-gray-900 uppercase focus:outline-none focus:shadow-outline">
-        <img src="assets/images/logos/logo-white.png" alt="Vibe" class="h-8">
+        <img src="assets/images/logos/logo-white.png" alt="Vibe" class="h-6">
       </a>
-      <button class="text-primary rounded-lg focus:outline-none focus:shadow-outline" (click)="toggleMenu()">
+      <button class="text-white rounded-lg focus:outline-none focus:shadow-outline" (click)="toggleMenu()">
         <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
           <path *ngIf="!open" fill-rule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
@@ -21,7 +21,7 @@
       <nav class="flex flex-col md:items-center md:justify-between md:flex-row py-2 gap-y-4">
         <a routerLink="" (click)="toggleMenu()"
            class="hidden md:block text-lg text-gray-900 focus:outline-none focus:shadow-outline">
-          <img src="assets/images/logos/logo-white.png" alt="Vibe" class="h-12">
+          <img src="assets/images/logos/logo-white.png" alt="Vibe" class="h-8">
         </a>
 
         <div class="flex flex-col items-center md:justify-between md:flex-row text-white gap-x-8 gap-y-2">
@@ -44,11 +44,11 @@
         </div>
 
         <div class="flex justify-center md:justify-between items-center gap-x-5">
-          <a href="#" target="_blank" class="text-white">
+          <a [href]="constantService.facebookLink" target="_blank" class="text-white">
             <i class="fa-brands fa-facebook text-3xl"></i>
           </a>
 
-          <a href="#" target="_blank" class="text-white">
+          <a [href]="constantService.instagramLink" target="_blank" class="text-white">
             <i class="fa-brands fa-instagram text-4xl"></i>
           </a>
         </div>
