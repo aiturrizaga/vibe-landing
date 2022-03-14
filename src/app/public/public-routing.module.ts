@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutUsPage, HomePage, ServicePage } from "@vibe/public/pages";
+import { AboutUsPage, DiscographyPage, HomePage, ServicePage } from "@vibe/public/pages";
 
 const routes: Routes = [
   {
@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'servicios',
     component: ServicePage
+  },
+  {
+    path: 'discografia',
+    component: DiscographyPage
   }
 ];
 
