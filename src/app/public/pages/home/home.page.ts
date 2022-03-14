@@ -35,10 +35,16 @@ export class HomePage implements OnInit {
     }
   };
 
+  showVideo = false;
+
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  toggleVideo() {
+    this.showVideo = !this.showVideo;
   }
 
 }
