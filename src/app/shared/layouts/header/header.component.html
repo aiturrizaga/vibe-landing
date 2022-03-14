@@ -1,5 +1,5 @@
 <!-- Header -->
-<div class="fixed w-full bg-transparent z-30">
+<div id="navbar_container" class="fixed w-full bg-transparent z-30">
   <div class="max-w-screen-xl py-2 px-4 mx-auto md:px-6 lg:px-8">
     <div class="block md:hidden p-2 flex flex-row items-center justify-between">
       <a routerLink="" class="text-lg text-gray-900 uppercase focus:outline-none focus:shadow-outline">
@@ -17,42 +17,48 @@
       </button>
     </div>
 
-    <div [ngClass]="{'block': open, 'hidden': !open}" class="md:block">
+    <div [ngClass]="{'block': open, 'hidden': !open}" class="relative md:block">
       <nav class="flex flex-col md:items-center md:justify-between md:flex-row py-2 gap-y-4">
-        <a routerLink="" (click)="toggleMenu()"
-           class="hidden md:block text-lg text-gray-900 focus:outline-none focus:shadow-outline">
+        <a routerLink="" (click)="toggleMenu()" [routerLinkActiveOptions]="{exact: true}"
+           routerLinkActive="border-b-2 z-40 border-b-primary"
+           class="hidden md:block text-lg text-gray-900 focus:outline-none focus:shadow-outline pb-3">
           <img src="assets/images/logos/logo-white.png" alt="Vibe" class="h-8">
         </a>
 
         <div class="flex flex-col items-center md:justify-between md:flex-row text-white gap-x-8 gap-y-2">
-          <a routerLink="nosotros" (click)="toggleMenu()"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline">
+          <a routerLink="nosotros" (click)="toggleMenu()" routerLinkActive="border-b-2 z-40 border-b-primary"
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4">
             Nosotros
           </a>
-          <a routerLink="servicios" (click)="toggleMenu()"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline">
+
+          <a routerLink="servicios" (click)="toggleMenu()" routerLinkActive="border-b-2 z-40 border-b-primary"
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4">
             Servicios
           </a>
-          <a routerLink="discografia" (click)="toggleMenu()"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline">
+          <a routerLink="discografia" (click)="toggleMenu()" routerLinkActive="border-b-2 z-40 border-b-primary"
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4">
             Discografía
           </a>
-          <a routerLink="cotizar" (click)="toggleMenu()"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline">
+          <a [href]="constantService.waLink" target="_blank" (click)="toggleMenu()"
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4">
             Cotizar
           </a>
         </div>
 
         <div class="flex justify-center md:justify-between items-center gap-x-5">
-          <a [href]="constantService.facebookLink" target="_blank" class="text-white">
+          <a [href]="constantService.facebookLink" target="_blank" class="text-white pb-4">
             <i class="fa-brands fa-facebook text-3xl"></i>
           </a>
 
-          <a [href]="constantService.instagramLink" target="_blank" class="text-white">
+          <a [href]="constantService.instagramLink" target="_blank" class="text-white pb-4">
             <i class="fa-brands fa-instagram text-4xl"></i>
           </a>
         </div>
       </nav>
+
+      <div class="absolute w-full bottom-3.5 left-0">
+        <hr class="bg-gray-400">
+      </div>
     </div>
   </div>
 </div>

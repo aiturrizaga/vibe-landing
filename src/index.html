@@ -12,5 +12,19 @@
 </head>
 <body>
 <app-root></app-root>
+
+<script>
+  window.onscroll = function () {
+    const navbar_container = document.getElementById("navbar_container");
+    const sticky = navbar_container.offsetTop;
+    if (window.pageYOffset > sticky) {
+      navbar_container.classList.remove('bg-transparent');
+      navbar_container.classList.add('bg-header');
+    } else {
+      navbar_container.classList.remove('bg-header');
+      navbar_container.classList.add('bg-transparent');
+    }
+  };
+</script>
 </body>
 </html>

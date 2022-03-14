@@ -70,6 +70,13 @@ body {
   position: relative;
 }
 
+.bg-header {
+  background-image: linear-gradient(0deg, rgba(26, 26, 26, 0) 0, #000000 36%);
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .bg-footer {
   background-image: linear-gradient(180deg, rgba(26, 26, 26, 0) 0, #000000 72%);
   background-position: bottom right;
