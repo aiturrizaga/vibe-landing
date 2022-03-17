@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import SwiperCore, { Navigation, SwiperOptions } from "swiper";
+import SwiperCore, { Autoplay, Navigation, SwiperOptions } from "swiper";
 import { Artist, ArtistService } from "@vibe/shared/services";
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Autoplay, Navigation]);
 
 @Component({
   selector: 'app-home-page',
