@@ -1,0 +1,24 @@
+[
+  {
+    "order": 1,
+    "image": "assets/images/albums/album_01.png",
+    "alt": "Album 01",
+    "name": "CORAZÓN AGRADECIDO",
+    "description": "Letra y composición: Diego Armando </br>Producción Musical: Daniel Valverde</br>Mezcla: Gohan Verastegui</br>Mastering: Emilio Villafana",
+    "networks": {
+      "spotify": "https://open.spotify.com/album/7d6Wy9h5zJH1b8xFhKTsa7?si=IDXqsTh3ScuCj_5Exg928Q",
+      "youtube": "https://youtube.com/playlist?list=PLsSCwYa15PR8PuaxBH4bWVJni5tqBxTRc"
+    }
+  },
+  {
+    "order": 2,
+    "image": "assets/images/albums/album_02.png",
+    "alt": "Album 02",
+    "name": "RENACER",
+    "description": "Letra y composición: Diego Armando </br>Producción Musical: Gabriel Castro</br>Mastering: Gabriel Castro</br>",
+    "networks": {
+      "spotify": "https://open.spotify.com/album/0R4SyV2rGOAWvWsaXEVj01?si=Og1yzZVaQP2AAcePLBomow",
+      "youtube": "https://youtube.com/playlist?list=PLsSCwYa15PR9lTk39Gaca830dPDkS6GOG"
+    }
+  }
+]
