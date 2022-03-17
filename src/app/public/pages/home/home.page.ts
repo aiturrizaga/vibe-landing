@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 
-import SwiperCore, { Autoplay, Navigation, SwiperOptions } from "swiper";
+import SwiperCore, { EffectFade, Autoplay, Navigation, SwiperOptions } from "swiper";
 import { Artist, ArtistService } from "@vibe/shared/services";
+import { SwiperComponent } from "swiper/angular";
 
-SwiperCore.use([Autoplay, Navigation]);
+SwiperCore.use([EffectFade, Autoplay, Navigation]);
 
 @Component({
   selector: 'app-home-page',
@@ -12,7 +13,9 @@ SwiperCore.use([Autoplay, Navigation]);
 })
 export class HomePage implements OnInit {
 
-  config: SwiperOptions = {
+  @ViewChild('swiperRef', { static: false }) swiper?: SwiperComponent;
+
+  serviceCarouselConfig: SwiperOptions = {
     loop: false,
     slidesPerView: 'auto',
     spaceBetween: 100,
@@ -38,27 +41,17 @@ export class HomePage implements OnInit {
 
   artistCarouselConfig: SwiperOptions = {
     loop: true,
-    autoplay: true,
-    slidesPerView: 'auto',
-    allowTouchMove: true,
-    navigation: false,
-    breakpoints: {
-      '1280': {
-        slidesPerView: 1
-      },
-      '1024': {
-        slidesPerView: 1
-      },
-      '768': {
-        slidesPerView: 1
-      },
-      '640': {
-        slidesPerView: 1
-      }
+    fadeEffect: { crossFade: true },
+    virtualTranslate: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false
     }
   };
 
   showVideo = false;
+  selectedEmbed = '';
   artists: Artist[] = [];
 
   constructor(private artistService: ArtistService) {
@@ -77,6 +70,19 @@ export class HomePage implements OnInit {
 
   toggleVideo() {
     this.showVideo = !this.showVideo;
+    if (!this.showVideo) {
+      this.swiper?.swiperRef.autoplay.start();
+    }
+  }
+
+  openFramePlayer(source: string) {
+    this.toggleVideo();
+    this.selectedEmbed = source;
+    this.swiper?.swiperRef.autoplay.stop();
+  }
+
+  @HostListener('window:keyup.esc') onKeyUp() {
+    this.toggleVideo();
   }
 
 }

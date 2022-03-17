@@ -55,7 +55,7 @@
       <h4 class="text-white text-3xl font-medium uppercase">SERVICIOS</h4>
     </div>
 
-    <swiper [config]="config">
+    <swiper [config]="serviceCarouselConfig">
       <ng-template swiperSlide>
         <a routerLink="servicios" class="image_container">
           <img src="assets/images/services/servis-04.png" alt="Servicio 04" class="object-contain w-1/4">
@@ -89,8 +89,8 @@
 </div>
 
 <div class="bg-home-b__page h-full">
-  <div class="relative max-w-7xl mx-auto px-16 lg:px-8 pt-20 pb-40">
-    <swiper [config]="artistCarouselConfig">
+  <div class="max-w-7xl mx-auto px-16 lg:px-8 pt-20 pb-40" *ngIf="artists && artists.length > 0">
+    <swiper #swiperRef [config]="artistCarouselConfig">
       <ng-template swiperSlide *ngFor="let artist of artists">
         <div class="flex flex-col md:flex-row items-center gap-y-6">
           <div class="w-full md:w-1/2">
@@ -106,16 +106,15 @@
           </div>
 
           <div class="w-full md:w-1/2">
-            <div class="flex flex-col items-center gap-y-8">
-              <iframe class="rounded-3xl h-40 w-80 md:h-80 md:w-4/5"
+            <div class="relative flex flex-col items-center gap-y-8">
+              <iframe class="rounded-3xl h-40 w-80 md:h-80 md:w-4/5 z-10"
                       [src]="artist.youtubeEmbed | safe: 'resourceUrl'"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen></iframe>
-              <button (click)="toggleVideo()" *ngIf="false"
-                      class="flex justify-center items-center gap-x-2 px-4 py-2 text-white border border-white rounded-full text-xl">
-                <i class="fa-solid fa-play"></i>
-                <span class="font-medium">¡Ver video!</span>
-              </button>
+              <div class="absolute bottom-0 right-0 z-20 w-full cursor-pointer"
+                   (click)="openFramePlayer(artist.youtubeEmbed)">
+                <div class="bg-black opacity-5 rounded-3xl h-40 w-80 md:h-80 md:w-full"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -141,7 +140,7 @@
 
   <div class="my-0 mx-auto block relative">
     <div class="grid min-h-screen place-items-center">
-      <iframe width="750" height="450" src="https://www.youtube.com/embed/u5V9XPeN6Cg"
+      <iframe width="750" height="450" [src]="selectedEmbed | safe: 'resourceUrl'"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
     </div>
