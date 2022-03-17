@@ -115,5 +115,6 @@ body {
 }
 
 .btn-primary {
-  @apply rounded-full bg-primary text-white font-medium opacity-80 hover:opacity-100 transition-opacity duration-150;
+  background-color: rgba(18, 68, 243, 0.4);
+  @apply rounded-full border-2 border-primary text-white font-medium hover:bg-primary transition-colors duration-150;
 }
