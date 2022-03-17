@@ -123,3 +123,18 @@ body {
   background-color: rgba(18, 68, 243, 0.4);
   @apply rounded-full border-2 border-primary text-white font-medium hover:bg-primary transition-colors duration-150;
 }
+
+.image_in_zoom {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  @apply filter grayscale hover:grayscale-0 hover:transition_for_zoom;
+}
+
+.transition_for_zoom {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
