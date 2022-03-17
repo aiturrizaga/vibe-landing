@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent, HeaderComponent } from "@vibe/shared/layouts";
 import { PublicContainerComponent } from "@vibe/shared/containers";
 import { RouterModule } from "@angular/router";
+import { SafePipe } from './pipes/safe.pipe';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     PublicContainerComponent,
-    FooterComponent
+    FooterComponent,
+    SafePipe
   ],
-  exports: [
-    FooterComponent
-  ],
+    exports: [
+        FooterComponent,
+        SafePipe
+    ],
   imports: [
     CommonModule,
     RouterModule

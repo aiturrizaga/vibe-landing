@@ -1,0 +1,26 @@
+[
+  {
+    "firstName": "Diego",
+    "secondName": "Armando",
+    "associatedFrom": "2021 - 2022",
+    "description": "Este es el resumen de todo lo que vivimos en el concierto Renacer, estamos agradecidos con todo el que fue parte de este proyecto.",
+    "phrase": "¡Toda la gloria sea para Dios!",
+    "youtubeEmbed": "https://www.youtube.com/embed/u5V9XPeN6Cg?controls=0"
+  },
+  {
+    "firstName": "Stephie",
+    "secondName": "García",
+    "associatedFrom": "2021 - 2022",
+    "description": "Hola soy Stephie García. Dame una pluma y una hoja me véras creando poemas para aquel que sentido a mi vida dio.",
+    "phrase": "Prefiero el invierno porque trae mayor inspiración </br> ¿No lo crees?",
+    "youtubeEmbed": "https://www.youtube.com/embed/iamzEELWtAY?controls=0"
+  },
+  {
+    "firstName": "Fabrizio",
+    "secondName": "Andy",
+    "associatedFrom": "2021 - 2022",
+    "description": "¡Hey Hola! Soy Fabrizio. </br> Mi pasión es Dios, luego la música. Podria vivir toda mi vida hablando del evangelio a traves de mis canciones.",
+    "phrase": "¿Te gustaría acompañarme en este camino?",
+    "youtubeEmbed": "https://www.youtube.com/embed/u5V9XPeN6Cg?controls=0"
+  }
+]

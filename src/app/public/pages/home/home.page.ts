@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import SwiperCore, { Navigation, SwiperOptions } from "swiper";
+import { Artist, ArtistService } from "@vibe/shared/services";
 
 SwiperCore.use([Navigation]);
 
@@ -35,13 +36,43 @@ export class HomePage implements OnInit {
     }
   };
 
-  showVideo = false;
+  artistCarouselConfig: SwiperOptions = {
+    loop: true,
+    autoplay: true,
+    slidesPerView: 'auto',
+    allowTouchMove: true,
+    navigation: false,
+    breakpoints: {
+      '1280': {
+        slidesPerView: 1
+      },
+      '1024': {
+        slidesPerView: 1
+      },
+      '768': {
+        slidesPerView: 1
+      },
+      '640': {
+        slidesPerView: 1
+      }
+    }
+  };
 
-  constructor() {
+  showVideo = false;
+  artists: Artist[] = [];
+
+  constructor(private artistService: ArtistService) {
+    this.getArtists();
   }
 
   ngOnInit(): void {
     window.scroll(0, 0);
+  }
+
+  getArtists() {
+    this.artistService.findAll().subscribe(
+      res => this.artists = res
+    );
   }
 
   toggleVideo() {

@@ -90,33 +90,37 @@
 
 <div class="bg-home-b__page h-full">
   <div class="relative max-w-7xl mx-auto px-16 lg:px-8 pt-20 pb-40">
-    <div class="flex flex-col md:flex-row items-center gap-y-6">
-      <div class="w-full md:w-1/2">
-        <div class="flex flex-col items-start gap-y-8">
-          <img src="assets/svgs/diego_armando-iso.svg" alt="Diego armando" class="object-contain w-3/4">
-          <h5 class="text-white text-2xl font-medium">ARTISTA ASOCIADO | 2021 - 2022</h5>
-          <p class="text-white text-lg w-3/4">
-            Este es el resumen de todo lo que vivimos en el concierto Renacer.
-            Agradecidos con todos los que fueron parte de este proyecto.
-          </p>
-          <span class="text-white text-lg font-medium">¡Toda la gloria sea para Dios!</span>
-        </div>
-      </div>
+    <swiper [config]="artistCarouselConfig">
+      <ng-template swiperSlide *ngFor="let artist of artists">
+        <div class="flex flex-col md:flex-row items-center gap-y-6">
+          <div class="w-full md:w-1/2">
+            <div class="flex flex-col items-start gap-y-8">
+              <div class="flex flex-col justify-start gap-y-2 text-7xl font-medium text-white">
+                <span>{{artist.firstName}}</span>
+                <span>{{artist.secondName}}</span>
+              </div>
+              <h5 class="text-white text-2xl font-medium pb-6">ARTISTA ASOCIADO | {{artist.associatedFrom}}</h5>
+              <p class="text-white text-lg w-3/4" [innerHTML]="artist.description | safe: 'html'"></p>
+              <span class="text-white text-lg font-medium" [innerHTML]="artist.phrase | safe: 'html'"></span>
+            </div>
+          </div>
 
-      <div class="w-full md:w-1/2">
-        <div class="flex flex-col items-center gap-y-8">
-          <iframe class="rounded-3xl h-40 w-80 md:h-64 md:w-3/4"
-                  src="https://www.youtube.com/embed/u5V9XPeN6Cg?controls=0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-          <button (click)="toggleVideo()"
-                  class="flex justify-center items-center gap-x-2 px-4 py-2 text-white border border-white rounded-full text-xl">
-            <i class="fa-solid fa-play"></i>
-            <span class="font-medium">¡Ver video!</span>
-          </button>
+          <div class="w-full md:w-1/2">
+            <div class="flex flex-col items-center gap-y-8">
+              <iframe class="rounded-3xl h-40 w-80 md:h-80 md:w-4/5"
+                      [src]="artist.youtubeEmbed | safe: 'resourceUrl'"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+              <button (click)="toggleVideo()" *ngIf="false"
+                      class="flex justify-center items-center gap-x-2 px-4 py-2 text-white border border-white rounded-full text-xl">
+                <i class="fa-solid fa-play"></i>
+                <span class="font-medium">¡Ver video!</span>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </ng-template>
+    </swiper>
   </div>
 
   <vibe-footer></vibe-footer>
