@@ -32,13 +32,21 @@ export class DiscographyPage implements OnInit {
     this.showSingle = !this.showSingle;
   }
 
+  closeSingle() {
+    this.showSingle = false;
+  }
+
+  openSingle() {
+    this.showSingle = true;
+  }
+
   openPlayer(data: Music) {
     this.toggleSingle();
     this.selectedMusic = data;
   }
 
   @HostListener('window:keyup.esc') onKeyUp() {
-    this.toggleSingle();
+    this.closeSingle();
   }
 
 }
