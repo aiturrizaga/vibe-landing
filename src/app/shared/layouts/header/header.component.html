@@ -20,48 +20,55 @@
     <div [ngClass]="{'block': open, 'hidden': !open}" class="relative md:block">
       <nav class="flex flex-col md:items-center md:justify-between md:flex-row py-2 gap-y-4">
         <a routerLink="" (click)="toggleMenu()" [routerLinkActiveOptions]="{exact: true}"
-           routerLinkActive="border-b-2 z-40 border-b-primary opacity-100" #homeLink="routerLinkActive"
+           routerLinkActive="active-nav" #homeLink="routerLinkActive"
            [ngClass]="{'opacity-50': !homeLink.isActive}"
-           class="hidden md:block text-lg text-gray-900 focus:outline-none focus:shadow-outline pb-3">
+           class="hidden md:block text-lg text-gray-900 focus:outline-none focus:shadow-outline pb-3 hover:active-nav">
           <img src="assets/images/logos/logo-white.png" alt="Vibe" class="h-8">
         </a>
 
         <div class="flex flex-col items-center md:justify-between md:flex-row text-white gap-x-8 gap-y-2">
           <a routerLink="nosotros" (click)="toggleMenu()"
-             routerLinkActive="border-b-2 z-40 border-b-primary opacity-100"
+             routerLinkActive="active-nav"
              #aboutLink="routerLinkActive"
              [ngClass]="{'opacity-50': !aboutLink.isActive}"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4">
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4 hover:active-nav">
             Nosotros
           </a>
 
           <a routerLink="servicios" (click)="toggleMenu()"
-             routerLinkActive="border-b-2 z-40 border-b-primary opacity-100"
+             routerLinkActive="active-nav"
              #serviceLink="routerLinkActive"
              [ngClass]="{'opacity-50': !serviceLink.isActive}"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4">
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4 hover:active-nav">
             Servicios
           </a>
           <a routerLink="discografia" (click)="toggleMenu()"
-             routerLinkActive="border-b-2 z-40 border-b-primary opacity-100"
+             routerLinkActive="active-nav"
              #discLink="routerLinkActive"
              [ngClass]="{'opacity-50': !discLink.isActive}"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4">
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4 hover:active-nav">
             Discografía
           </a>
           <a [href]="constantService.waLink" target="_blank" (click)="toggleMenu()"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4 opacity-50">
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4 opacity-50 hover:active-nav">
             Cotizar
           </a>
         </div>
 
         <div class="flex justify-center md:justify-between items-center gap-x-5">
-          <a [href]="constantService.facebookLink" target="_blank" class="text-white pb-4 opacity-50 hover:opacity-100">
+          <a [href]="constantService.instagramLink" target="_blank"
+             class="text-white pb-4 opacity-50 hover:opacity-100">
+            <i class="fa-brands fa-instagram text-4xl"></i>
+          </a>
+
+          <a [href]="constantService.facebookLink" target="_blank"
+             class="text-white pb-4 opacity-50 hover:opacity-100">
             <i class="fa-brands fa-facebook text-3xl"></i>
           </a>
 
-          <a [href]="constantService.instagramLink" target="_blank" class="text-white pb-4 opacity-50 hover:opacity-100">
-            <i class="fa-brands fa-instagram text-4xl"></i>
+          <a [href]="constantService.tiktokLink" target="_blank"
+             class="text-white pb-4 opacity-50 hover:opacity-100">
+            <i class="fa-brands fa-tiktok text-3xl"></i>
           </a>
         </div>
       </nav>

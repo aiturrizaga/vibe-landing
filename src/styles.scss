@@ -13,7 +13,6 @@
 
 @import "~swiper/css";
 @import "~swiper/css/navigation";
-@import "~swiper/css/effect-fade";
 
 html, body {
   scroll-behavior: smooth;
@@ -37,6 +36,10 @@ body {
 
 .swiper-button-next, .swiper-button-prev {
   @apply text-white border-gray-500;
+}
+
+.active-nav {
+  @apply border-b-2 z-40 border-b-primary opacity-100;
 }
 
 .bg-home-a__page {

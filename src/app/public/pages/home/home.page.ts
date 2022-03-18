@@ -1,10 +1,10 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 
-import SwiperCore, { EffectFade, Autoplay, Navigation, SwiperOptions } from "swiper";
+import SwiperCore, { Autoplay, Navigation, SwiperOptions } from "swiper";
 import { Artist, ArtistService } from "@vibe/shared/services";
 import { SwiperComponent } from "swiper/angular";
 
-SwiperCore.use([EffectFade, Autoplay, Navigation]);
+SwiperCore.use([Autoplay, Navigation]);
 
 @Component({
   selector: 'app-home-page',
@@ -41,9 +41,7 @@ export class HomePage implements OnInit {
 
   artistCarouselConfig: SwiperOptions = {
     loop: true,
-    fadeEffect: { crossFade: true },
-    virtualTranslate: true,
-    effect: 'fade',
+    allowTouchMove: true,
     autoplay: {
       delay: 6000,
       disableOnInteraction: false

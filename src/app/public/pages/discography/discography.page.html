@@ -7,9 +7,9 @@
       </div>
 
       <div class="flex flex-wrap justify-center items-center pb-24">
-        <button type="button" *ngFor="let album of (musicService.albums$ | async)" (click)="openPlayer(album)"
-                class="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 px-1.5 py-3 md:px-4 md:py-6 gap-y-4 focus:outline-none">
-          <img [src]="album.image" [alt]="album.alt" class="object-contain image_in_zoom">
+        <button type="button" *ngFor="let single of (musicService.albums$ | async)" (click)="openPlayer(single)"
+                class="flex flex-col items-center w-full sm:w-1/2 md:w-5/12 px-1.5 py-3 md:px-8 md:py-6 gap-y-4 focus:outline-none">
+          <img [src]="single.image" [alt]="single.alt" class="object-contain image_in_zoom">
         </button>
       </div>
     </div>
