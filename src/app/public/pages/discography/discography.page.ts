@@ -62,7 +62,7 @@ export class DiscographyPage implements OnInit {
   }
 
   openPlayer(data: Music) {
-    this.toggleSingle();
+    this.showSingle = true;
     this.selectedMusic = data;
   }
 
