@@ -4,7 +4,20 @@
     "image": "assets/images/singles/single_01.png",
     "alt": "Single 01",
     "name": "UNA VEZ MÁS",
-    "description": "Letra y composición: Diego Armando </br>Producción Musical: Gabriel Castro</br>Mastering: Gabriel Castro",
+    "descriptions": [
+      {
+        "header": "Letra y composición",
+        "content": "Diego Armando"
+      },
+      {
+        "header": "Producción Musical",
+        "content": "Gabriel Castro"
+      },
+      {
+        "header": "Mastering",
+        "content": "Gabriel Castro"
+      }
+    ],
     "networks": {
       "spotify": "https://open.spotify.com/album/0R4SyV2rGOAWvWsaXEVj01?si=Og1yzZVaQP2AAcePLBomow",
       "youtube": "https://www.youtube.com/watch?v=kxEHhltOWrc"
@@ -15,7 +28,24 @@
     "image": "assets/images/singles/single_02.png",
     "alt": "Single 02",
     "name": "WAYMAKER & HAS AUMENTADO",
-    "description": "Letra y composición: Diego Armando </br>Producción Musical: Daniel Valverde</br>Mezcla: Gohan Verastegui</br>Mastering: Emilio Villafana",
+    "descriptions": [
+      {
+        "header": "Letra y composición",
+        "content": "Diego Armando"
+      },
+      {
+        "header": "Producción Musical",
+        "content": "Daniel Valverde"
+      },
+      {
+        "header": "Mezcla",
+        "content": "Gohan Verastegui"
+      },
+      {
+        "header": "Mastering",
+        "content": "Emilio Villafana"
+      }
+    ],
     "networks": {
       "spotify": "https://open.spotify.com/track/5FuiJbGJmgeNcyGaHgmLJq?si=f7853a54eec54f47",
       "youtube": "https://www.youtube.com/watch?v=nmJBGFepn7g"
@@ -26,7 +56,24 @@
     "image": "assets/images/singles/single_03.png",
     "alt": "Single 03",
     "name": "AVIVA TU IGLESIA",
-    "description": "Letra y composición: Diego Armando </br>Producción Musical: Daniel Valverde</br>Mezcla: Gohan Verastegui</br>Mastering: Emilio Villafana",
+    "descriptions": [
+      {
+        "header": "Letra y composición",
+        "content": "Diego Armando"
+      },
+      {
+        "header": "Producción Musical",
+        "content": "Daniel Valverde"
+      },
+      {
+        "header": "Mezcla",
+        "content": "Gohan Verastegui"
+      },
+      {
+        "header": "Mastering",
+        "content": "Emilio Villafana"
+      }
+    ],
     "networks": {
       "spotify": "https://open.spotify.com/track/3s8DXd3p4Ob0B84I4AMyRK?si=8bd97d00890e46c1",
       "youtube": "https://www.youtube.com/watch?v=ypels01kgfk&t=343s"
@@ -37,7 +84,24 @@
     "image": "assets/images/singles/single_04.png",
     "alt": "Single 04",
     "name": "HAY UNA UNCIÓN",
-    "description": "Letra y composición: Diego Armando </br>Producción Musical: Daniel Valverde</br>Mezcla: Gohan Verastegui</br>Mastering: Emilio Villafana",
+    "descriptions": [
+      {
+        "header": "Letra y composición",
+        "content": "Diego Armando"
+      },
+      {
+        "header": "Producción Musical",
+        "content": "Daniel Valverde"
+      },
+      {
+        "header": "Mezcla",
+        "content": "Gohan Verastegui"
+      },
+      {
+        "header": "Mastering",
+        "content": "Emilio Villafana"
+      }
+    ],
     "networks": {
       "spotify": "https://open.spotify.com/track/6TOeF2vphtYxj43IIsWOUR?si=97a8b2d09bc54e3a",
       "youtube": "https://www.youtube.com/watch?v=wuwnYNVE0iQ"

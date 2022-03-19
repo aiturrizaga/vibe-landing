@@ -7,13 +7,18 @@ export interface Music {
   image: string;
   alt: string;
   name: string;
-  description: string;
+  descriptions: Description[];
   networks: SocialNetworks;
 }
 
 export interface SocialNetworks {
   spotify: string;
   youtube: string;
+}
+
+export interface Description {
+  header: string;
+  content: string;
 }
 
 @Injectable({

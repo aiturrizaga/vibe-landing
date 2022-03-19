@@ -19,7 +19,7 @@ export class DiscographyPage implements OnInit {
     image: '',
     alt: '',
     name: '',
-    description: '',
+    descriptions: [],
     networks: {
       spotify: '',
       youtube: ''
