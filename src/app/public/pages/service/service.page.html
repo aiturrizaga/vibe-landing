@@ -9,11 +9,13 @@
     <div class="flex flex-wrap items-center gap-y-0 md:gap-y-10">
       <div class="flex flex-col justify-center items-center w-full md:w-1/2 px-4 py-6">
         <img src="assets/images/services/servis-01.png" alt="Servicio 01"
+             (click)="openBrochure('assets/brochure/estudio.pdf')"
              class="object-contain w-full md:w-3/4 border-3 border-primary rounded-2xl md:border-0">
-        <div class="text-white text-center text-xl md:text-3xl font-medium pt-2 pb-6 md:pt-0 md:pb-14">Estudio VIBE</div>
+        <div class="text-white text-center text-xl md:text-3xl font-medium pt-2 pb-6 md:pt-0 md:pb-14">Estudio VIBE
+        </div>
         <div class="hidden md:block">
-          <a href="#"
-             class="flex justify-center items-center gap-x-2 px-4 py-2 btn-primary font-medium text-sm md:text-base">
+          <button type="button" (click)="openBrochure('assets/brochure/estudio.pdf')"
+                  class="flex justify-center items-center gap-x-2 px-4 py-2 btn-primary font-medium text-sm md:text-base">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 md:h-6 md:w-6"
                  viewBox="0 0 16 16">
               <path
@@ -22,16 +24,18 @@
                 d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
             </svg>
             <span>Descargar brochure</span>
-          </a>
+          </button>
         </div>
       </div>
 
       <div class="flex flex-col justify-center items-center w-full md:w-1/2 px-4 py-6">
         <img src="assets/images/services/servis-02.png" alt="Servicio 02"
+             (click)="openBrochure('assets/brochure/vocal.pdf')"
              class="object-contain w-full md:w-3/4 border-3 border-primary rounded-2xl md:border-0">
         <div class="text-white text-center text-xl md:text-3xl font-medium pt-2 pb-6 md:pt-0 md:pb-14">Vocal</div>
         <div class="hidden md:block">
-          <a href="#" class="flex justify-center items-center gap-x-2 px-4 py-2 btn-primary text-sm md:text-base">
+          <button type="button" (click)="openBrochure('assets/brochure/vocal.pdf')"
+                  class="flex justify-center items-center gap-x-2 px-4 py-2 btn-primary text-sm md:text-base">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 md:h-6 md:w-6"
                  viewBox="0 0 16 16">
               <path
@@ -40,17 +44,20 @@
                 d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
             </svg>
             <span>Descargar brochure</span>
-          </a>
+          </button>
         </div>
       </div>
 
       <div class="flex flex-col justify-center items-center w-full md:w-1/2 px-4 py-6">
         <img src="assets/images/services/servis-03.png" alt="Servicio 03"
+             (click)="openBrochure('assets/brochure/product-music.pdf')"
              class="object-contain w-full md:w-3/4 border-3 border-primary rounded-2xl md:border-0">
-        <div class="text-white text-center text-xl md:text-3xl font-medium pt-2 pb-6 md:pt-0 md:pb-14">Producción Musical</div>
+        <div class="text-white text-center text-xl md:text-3xl font-medium pt-2 pb-6 md:pt-0 md:pb-14">Producción
+          Musical
+        </div>
         <div class="hidden md:block">
-          <a href="#"
-             class="flex justify-center items-center gap-x-2 px-4 py-2 btn-primary font-medium text-sm md:text-base">
+          <button type="button" (click)="openBrochure('assets/brochure/product-music.pdf')"
+                  class="flex justify-center items-center gap-x-2 px-4 py-2 btn-primary font-medium text-sm md:text-base">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 md:h-6 md:w-6"
                  viewBox="0 0 16 16">
               <path
@@ -59,17 +66,18 @@
                 d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
             </svg>
             <span>Descargar brochure</span>
-          </a>
+          </button>
         </div>
       </div>
 
       <div class="flex flex-col justify-center items-center w-full md:w-1/2 px-4 py-6">
         <img src="assets/images/services/servis-04.png" alt="Servicio 04"
+             (click)="openBrochure('assets/brochure/composicion.pdf')"
              class="object-contain w-full md:w-3/4 border-3 border-primary rounded-2xl md:border-0">
         <div class="text-white text-center text-xl md:text-3xl font-medium pt-2 pb-6 md:pt-0 md:pb-14">Composición</div>
         <div class="hidden md:block">
-          <a href="#"
-             class="flex justify-center items-center gap-x-2 px-4 py-2 btn-primary font-medium text-sm md:text-base">
+          <button type="button" (click)="openBrochure('assets/brochure/composicion.pdf')"
+                  class="flex justify-center items-center gap-x-2 px-4 py-2 btn-primary font-medium text-sm md:text-base">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 md:h-6 md:w-6"
                  viewBox="0 0 16 16">
               <path
@@ -78,11 +86,36 @@
                 d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
             </svg>
             <span>Descargar brochure</span>
-          </a>
+          </button>
         </div>
       </div>
     </div>
   </div>
 
   <vibe-footer></vibe-footer>
+</div>
+
+
+<div *ngIf="showBrochure" class="w-full h-full fixed block top-0 left-0 opacity-100 z-40"
+     style="background-color: rgba(0, 0, 0, 0.9)">
+  <div class="absolute right-5 md:right-10 top-4 text-white z-50">
+    <div class="flex items-end cursor-pointer" (click)="toggleBrochure()">
+      <svg class="ml-auto fill-current w-8 h-8 md:w-6 md:h-6" xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 18 18">
+        <path
+          d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="my-0 mx-auto block relative">
+    <div class="grid min-h-screen place-items-center">
+      <pdf-viewer [src]="pdfSrc"
+                  [render-text]="true"
+                  [original-size]="false"
+                  style="width: 400px; height: 500px"
+      ></pdf-viewer>
+    </div>
+  </div>
+
 </div>
