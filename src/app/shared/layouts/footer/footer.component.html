@@ -1,28 +1,32 @@
-<div class="bg-footer py-8">
-  <div class="relative flex justify-center items-center gap-x-14 lg:gap-x-32 pb-8 px-6">
+<div class="bg-footer py-0 md:py-8">
+  <div class="relative flex justify-center items-center gap-x-4 md:gap-x-14 lg:gap-x-32 pb-8 px-6">
+    <span class="text-lg text-white pr-2.5 block md:hidden">Síguenos en</span>
+
     <a [href]="constantService.facebookLink" target="_blank" class="text-white">
-      <i class="fa-brands fa-facebook text-3xl"></i>
+      <i class="fa-brands fa-facebook text-2xl md:text-3xl pr-6 md:pr-0"></i>
     </a>
 
     <a [href]="constantService.instagramLink" target="_blank" class="text-white">
-      <i class="fa-brands fa-instagram text-4xl"></i>
+      <i class="fa-brands fa-instagram text-2xl md:text-4xl pr-6 md:pr-0"></i>
     </a>
 
     <a [href]="constantService.youtubeLink" target="_blank" class="text-white">
-      <i class="fa-brands fa-youtube text-4xl"></i>
+      <i class="fa-brands fa-youtube text-2xl md:text-4xl"></i>
     </a>
   </div>
 
-  <div class="bg-white border w-full"></div>
+  <div class="bg-white border w-full hidden md:block"></div>
 
-  <div class="max-w-screen-xl py-2 px-4 mx-auto md:px-6 lg:px-8">
-    <div class="flex justify-between items-center pt-8 text-white text-lg text-center">
-      <div>
-        SELLO DISCOGRÁFICO
-      </div>
-      <div>
-        <span class="font-medium">vibe 2022 </span>
-        <span class="font-light">- Todos los derechos reservados.</span>
+  <div class="bg-primary md:bg-transparent">
+    <div class="max-w-screen-xl pb-4 py-2 px-4 mx-auto md:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-center md:justify-between items-center pt-2 md:pt-8 text-white text-lg text-center">
+        <div class="text-sm font-medium">
+          SELLO DISCOGRÁFICO
+        </div>
+        <div class="text-sm font-medium">
+          <span class="font-medium">vibe 2022 </span>
+          <span class="font-light">- Todos los derechos reservados.</span>
+        </div>
       </div>
     </div>
   </div>
