@@ -91,58 +91,64 @@
       <h4 class="text-white text-xl md:text-3xl font-medium uppercase">SERVICIOS</h4>
     </div>
 
-    <swiper [config]="serviceCarouselConfig" class="hidden md:block">
-      <ng-template swiperSlide>
-        <a routerLink="servicios" class="image_container">
-          <img src="assets/images/services/servis-04.png" alt="Servicio 04" class="object-contain w-1/4">
-          <div class="image-content__text-footer text-white text-2xl font-medium">Composición</div>
-        </a>
-      </ng-template>
-      <ng-template swiperSlide>
-        <a routerLink="servicios" class="image_container">
-          <img src="assets/images/services/servis-01.png" alt="Servicio 01" class="object-contain w-1/4">
-          <div class="image-content__text-footer text-white text-2xl font-medium">Estudio VIBE</div>
-        </a>
-      </ng-template>
-      <ng-template swiperSlide>
-        <a routerLink="servicios" class="image_container">
-          <img src="assets/images/services/servis-03.png" alt="Servicio 03" class="object-contain w-1/4">
-          <div class="image-content__text-footer text-white text-2xl font-medium">Producción Musical</div>
-        </a>
-      </ng-template>
-      <ng-template swiperSlide>
-        <a routerLink="servicios" class="image_container">
-          <img src="assets/images/services/servis-02.png" alt="Servicio 02" class="object-contain w-1/4">
-          <div class="image-content__text-footer text-white text-2xl font-medium">Vocal</div>
-        </a>
-      </ng-template>
-    </swiper>
+    <div class="hidden md:block px-20">
+      <swiper [config]="serviceCarouselConfig">
+        <ng-template swiperSlide>
+          <a routerLink="servicios" class="image_container">
+            <img src="assets/images/services/servis-04.png" alt="Servicio 04" class="object-contain w-1/4">
+            <div class="image-content__text-footer text-white text-2xl font-medium">Composición</div>
+          </a>
+        </ng-template>
+        <ng-template swiperSlide>
+          <a routerLink="servicios" class="image_container">
+            <img src="assets/images/services/servis-01.png" alt="Servicio 01" class="object-contain w-1/4">
+            <div class="image-content__text-footer text-white text-2xl font-medium">Estudio VIBE</div>
+          </a>
+        </ng-template>
+        <ng-template swiperSlide>
+          <a routerLink="servicios" class="image_container">
+            <img src="assets/images/services/servis-03.png" alt="Servicio 03" class="object-contain w-1/4">
+            <div class="image-content__text-footer text-white text-2xl font-medium">Producción Musical</div>
+          </a>
+        </ng-template>
+        <ng-template swiperSlide>
+          <a routerLink="servicios" class="image_container">
+            <img src="assets/images/services/servis-02.png" alt="Servicio 02" class="object-contain w-1/4">
+            <div class="image-content__text-footer text-white text-2xl font-medium">Vocal</div>
+          </a>
+        </ng-template>
+      </swiper>
+    </div>
 
     <div class="block md:hidden flex flex-wrap justify-center items-center">
       <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
         <a routerLink="servicios" class="relative image_container focus:outline-none">
-          <img src="assets/images/services/servis-01.png" alt="Servicio 01" class="object-contain w-full border-3 border-primary rounded-2xl">
+          <img src="assets/images/services/servis-01.png" alt="Servicio 01"
+               class="object-contain w-full border-3 border-primary rounded-2xl">
           <span class="absolute bottom-2.5 right-0 left-0 mx-auto text-white text-sm">Estudio VIBE</span>
         </a>
       </div>
 
       <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
         <a routerLink="servicios" class="relative image_container focus:outline-none">
-          <img src="assets/images/services/servis-03.png" alt="Servicio 03" class="object-contain w-full border-3 border-primary rounded-2xl">
+          <img src="assets/images/services/servis-03.png" alt="Servicio 03"
+               class="object-contain w-full border-3 border-primary rounded-2xl">
           <span class="absolute bottom-2.5 right-0 left-0 mx-auto text-white text-sm">Producción Musical</span>
         </a>
       </div>
 
       <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
         <a routerLink="servicios" class="relative image_container focus:outline-none">
-          <img src="assets/images/services/servis-02.png" alt="Servicio 02" class="object-contain w-full border-3 border-primary rounded-2xl">
+          <img src="assets/images/services/servis-02.png" alt="Servicio 02"
+               class="object-contain w-full border-3 border-primary rounded-2xl">
           <span class="absolute bottom-2.5 right-0 left-0 mx-auto text-white text-sm">Vocal</span>
         </a>
       </div>
 
       <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
         <a routerLink="servicios" class="relative image_container focus:outline-none">
-          <img src="assets/images/services/servis-04.png" alt="Servicio 04" class="object-contain w-full border-3 border-primary rounded-2xl">
+          <img src="assets/images/services/servis-04.png" alt="Servicio 04"
+               class="object-contain w-full border-3 border-primary rounded-2xl">
           <span class="absolute bottom-2.5 right-0 left-0 mx-auto text-white text-sm">Composición</span>
         </a>
       </div>
@@ -166,8 +172,10 @@
                 <span class="hidden md:block">{{artist.firstName}}</span>
                 <span class="hidden md:block">{{artist.secondName}}</span>
               </div>
-              <h5 class="text-white text-sm md:text-2xl font-medium pb-4">ARTISTA ASOCIADO | {{artist.associatedFrom}}</h5>
-              <p class="text-white text-sm md:text-lg w-full md:w-3/4" [innerHTML]="artist.description | safe: 'html'"></p>
+              <h5 class="text-white text-sm md:text-2xl font-medium pb-4">ARTISTA ASOCIADO
+                | {{artist.associatedFrom}}</h5>
+              <p class="text-white text-sm md:text-lg w-full md:w-3/4"
+                 [innerHTML]="artist.description | safe: 'html'"></p>
               <span class="text-white text-sm md:text-lg font-medium" [innerHTML]="artist.phrase | safe: 'html'"></span>
             </div>
           </div>
