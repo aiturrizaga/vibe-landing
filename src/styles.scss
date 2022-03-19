@@ -109,7 +109,7 @@ body {
   position: relative;
   display: inline-block;
   text-align: center;
-  @apply border-0 hover:border-3 hover:border-primary rounded-2xl;
+  @apply border-0;
 }
 
 .border-3 {
@@ -228,5 +228,12 @@ body {
   .btn-primary {
     background-color: rgba(18, 68, 243, 0.4);
     @apply rounded-full border-2 border-primary text-white font-medium hover:bg-primary transition-colors duration-150;
+  }
+
+  .image_container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    @apply border-0 hover:border-3 hover:border-primary rounded-2xl;
   }
 }
