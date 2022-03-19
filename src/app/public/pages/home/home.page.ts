@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 
 import SwiperCore, { Autoplay, Navigation, SwiperOptions } from "swiper";
-import { Artist, ArtistService } from "@vibe/shared/services";
+import { Artist, ArtistService, ConstantService } from "@vibe/shared/services";
 import { SwiperComponent } from "swiper/angular";
 
 SwiperCore.use([Autoplay, Navigation]);
@@ -13,7 +13,7 @@ SwiperCore.use([Autoplay, Navigation]);
 })
 export class HomePage implements OnInit {
 
-  @ViewChild('swiperRef', { static: false }) swiper?: SwiperComponent;
+  @ViewChild('swiperRef', {static: false}) swiper?: SwiperComponent;
 
   serviceCarouselConfig: SwiperOptions = {
     loop: false,
@@ -52,7 +52,8 @@ export class HomePage implements OnInit {
   selectedEmbed = '';
   artists: Artist[] = [];
 
-  constructor(private artistService: ArtistService) {
+  constructor(private artistService: ArtistService,
+              public constantService: ConstantService) {
     this.getArtists();
   }
 

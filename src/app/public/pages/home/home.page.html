@@ -1,6 +1,6 @@
 <div class="bg-home-a__page h-full">
-  <div class="relative max-w-7xl mx-auto px-16 lg:px-8 pt-28 md:pt-0 pb-36 md:pb-0">
-    <div class="flex flex-col h-auto md:h-screen">
+  <div class="relative max-w-7xl mx-auto px-16 lg:px-8 pb-14 md:pb-0">
+    <div class="flex flex-col h-screen">
       <div class="grid place-items-center my-auto">
         <div class="flex flex-col justify-center items-center gap-y-8">
           <div class="flex flex-col items-center text-white">
@@ -8,54 +8,90 @@
             <span class="text-9xl font-bold">vibe</span>
           </div>
 
-          <a routerLink="nosotros" class="px-4 py-2 text-lg btn-primary">
-            ¡Conócenos!
+          <div class="flex flex-col items-center gap-y-4">
+            <a routerLink="nosotros" class="px-8 md:px-4 py-1 md:py-2 text-lg btn-primary">
+              ¡Conócenos!
+            </a>
+
+            <div class="block md:hidden flex justify-center items-center">
+              <a [href]="constantService.facebookLink" target="_blank" class="text-white">
+                <i class="fa-brands fa-facebook text-2xl md:text-3xl pr-6 md:pr-0"></i>
+              </a>
+
+              <a [href]="constantService.instagramLink" target="_blank" class="text-white">
+                <i class="fa-brands fa-instagram text-2xl md:text-4xl pr-6 md:pr-0"></i>
+              </a>
+
+              <a [href]="constantService.tiktokLink" target="_blank" class="text-white">
+                <i class="fa-brands fa-tiktok  text-2xl md:text-4xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative max-w-2xl mx-auto px-4 md:px-16 lg:px-8 pb-10">
+      <div class="hidden md:block">
+        <div class="flex flex-col md:flex-row md:justify-between items-center gap-y-6">
+          <div
+            class="flex flex-col gap-y-2 text-white border-b border-b-gray-400 opacity-50 hover:opacity-100 hover:border-b-2 hover:border-b-primary pb-3 px-12">
+            <a routerLink="servicios" class="flex justify-center items-center gap-x-2">
+              <svg fill="currentColor" class="h-8 w-8" viewBox="0 0 40 45" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.88889 45H31.1111C31.6459 45.0001 32.1627 44.8049 32.5668 44.4503C32.9709 44.0957 33.2352 43.6054 33.3111 43.0695L37.4822 13.5H40V9H36.9289L33.0978 1.24425C32.9138 0.87024 32.6303 0.555634 32.2794 0.33582C31.9284 0.116007 31.5238 -0.000293851 31.1111 5.57576e-07H8.88889C8.04667 5.57576e-07 7.27778 0.481501 6.9 1.24425L3.07111 9H0V13.5H2.51778L6.68889 43.0695C6.76482 43.6054 7.02909 44.0957 7.43319 44.4503C7.8373 44.8049 8.35414 45.0001 8.88889 45ZM32.04 20.25H7.96L7.00667 13.5H32.9911L32.04 20.25ZM10.8156 40.5L9.86222 33.75H30.1356L29.1822 40.5H10.8156ZM10.2622 4.5H29.7378L31.96 9H8.04L10.2622 4.5Z"
+                  fill="white"/>
+              </svg>
+              <span>Trabajemos juntos</span>
+            </a>
+          </div>
+
+          <div
+            class="flex flex-col gap-y-2 text-white border-b border-b-gray-400 opacity-50 hover:opacity-100 hover:border-b-2 hover:border-b-primary pb-3 px-12">
+            <a routerLink="discografia" class="flex justify-center items-center gap-x-2">
+              <svg fill="currentColor" class="h-8 w-8" viewBox="0 0 35 45" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17.5 36C21.1244 36 24.0625 32.9779 24.0625 29.25C24.0625 25.5221 21.1244 22.5 17.5 22.5C13.8756 22.5 10.9375 25.5221 10.9375 29.25C10.9375 32.9779 13.8756 36 17.5 36Z"
+                  fill="white"/>
+                <path
+                  d="M30.625 0H4.375C3.21468 0 2.10188 0.474106 1.28141 1.31802C0.460936 2.16193 0 3.30653 0 4.5V40.5C0 41.6935 0.460936 42.8381 1.28141 43.682C2.10188 44.5259 3.21468 45 4.375 45H30.625C31.7853 45 32.8981 44.5259 33.7186 43.682C34.5391 42.8381 35 41.6935 35 40.5V4.5C35 3.30653 34.5391 2.16193 33.7186 1.31802C32.8981 0.474106 31.7853 0 30.625 0ZM17.5 4.5C18.3653 4.5 19.2112 4.76392 19.9306 5.25839C20.6501 5.75285 21.2108 6.45566 21.542 7.27792C21.8731 8.10019 21.9597 9.00499 21.7909 9.87791C21.6221 10.7508 21.2054 11.5526 20.5936 12.182C19.9817 12.8113 19.2022 13.2399 18.3535 13.4135C17.5049 13.5872 16.6252 13.4981 15.8258 13.1575C15.0263 12.8169 14.3431 12.2401 13.8623 11.5001C13.3816 10.76 13.125 9.89002 13.125 9C13.125 7.80653 13.5859 6.66193 14.4064 5.81802C15.2269 4.97411 16.3397 4.5 17.5 4.5ZM17.5 40.5C15.3368 40.5 13.2221 39.8402 11.4235 38.604C9.62479 37.3679 8.2229 35.6109 7.39507 33.5552C6.56723 31.4995 6.35064 29.2375 6.77266 27.0552C7.19469 24.8729 8.23638 22.8684 9.76602 21.295C11.2957 19.7217 13.2445 18.6502 15.3662 18.2162C17.4879 17.7821 19.687 18.0049 21.6856 18.8564C23.6842 19.7078 25.3924 21.1498 26.5942 22.9998C27.796 24.8499 28.4375 27.025 28.4375 29.25C28.4375 32.2337 27.2852 35.0952 25.234 37.205C23.1828 39.3147 20.4008 40.5 17.5 40.5Z"
+                  fill="white"/>
+              </svg>
+              <span>Conoce nuestra música</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="block md:hidden">
+        <div class="flex flex-col items-center gap-y-3">
+          <a routerLink="servicios" class="flex justify-between items-center gap-x-2 text-white">
+            <span>Trabajemos juntos</span>
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+
+          <a routerLink="discografia" class="flex justify-between items-center gap-x-2 text-white">
+            <span>Nuestra música</span>
+            <i class="fa-solid fa-angle-right"></i>
           </a>
         </div>
       </div>
     </div>
 
-    <div class="relative max-w-2xl mx-auto px-16 lg:px-8 py-10">
-      <div class="flex flex-col md:flex-row md:justify-between items-center gap-y-6">
-        <div
-          class="flex flex-col gap-y-2 text-white border-b border-b-gray-400 opacity-50 hover:opacity-100 hover:border-b-2 hover:border-b-primary pb-3 px-12">
-          <a routerLink="servicios" class="flex justify-center items-center gap-x-2">
-            <svg fill="currentColor" class="h-8 w-8" viewBox="0 0 40 45" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M8.88889 45H31.1111C31.6459 45.0001 32.1627 44.8049 32.5668 44.4503C32.9709 44.0957 33.2352 43.6054 33.3111 43.0695L37.4822 13.5H40V9H36.9289L33.0978 1.24425C32.9138 0.87024 32.6303 0.555634 32.2794 0.33582C31.9284 0.116007 31.5238 -0.000293851 31.1111 5.57576e-07H8.88889C8.04667 5.57576e-07 7.27778 0.481501 6.9 1.24425L3.07111 9H0V13.5H2.51778L6.68889 43.0695C6.76482 43.6054 7.02909 44.0957 7.43319 44.4503C7.8373 44.8049 8.35414 45.0001 8.88889 45ZM32.04 20.25H7.96L7.00667 13.5H32.9911L32.04 20.25ZM10.8156 40.5L9.86222 33.75H30.1356L29.1822 40.5H10.8156ZM10.2622 4.5H29.7378L31.96 9H8.04L10.2622 4.5Z"
-                fill="white"/>
-            </svg>
-            <span>Trabajemos juntos</span>
-          </a>
-        </div>
-
-        <div
-          class="flex flex-col gap-y-2 text-white border-b border-b-gray-400 opacity-50 hover:opacity-100 hover:border-b-2 hover:border-b-primary pb-3 px-12">
-          <a routerLink="discografia" class="flex justify-center items-center gap-x-2">
-            <svg fill="currentColor" class="h-8 w-8" viewBox="0 0 35 45" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M17.5 36C21.1244 36 24.0625 32.9779 24.0625 29.25C24.0625 25.5221 21.1244 22.5 17.5 22.5C13.8756 22.5 10.9375 25.5221 10.9375 29.25C10.9375 32.9779 13.8756 36 17.5 36Z"
-                fill="white"/>
-              <path
-                d="M30.625 0H4.375C3.21468 0 2.10188 0.474106 1.28141 1.31802C0.460936 2.16193 0 3.30653 0 4.5V40.5C0 41.6935 0.460936 42.8381 1.28141 43.682C2.10188 44.5259 3.21468 45 4.375 45H30.625C31.7853 45 32.8981 44.5259 33.7186 43.682C34.5391 42.8381 35 41.6935 35 40.5V4.5C35 3.30653 34.5391 2.16193 33.7186 1.31802C32.8981 0.474106 31.7853 0 30.625 0ZM17.5 4.5C18.3653 4.5 19.2112 4.76392 19.9306 5.25839C20.6501 5.75285 21.2108 6.45566 21.542 7.27792C21.8731 8.10019 21.9597 9.00499 21.7909 9.87791C21.6221 10.7508 21.2054 11.5526 20.5936 12.182C19.9817 12.8113 19.2022 13.2399 18.3535 13.4135C17.5049 13.5872 16.6252 13.4981 15.8258 13.1575C15.0263 12.8169 14.3431 12.2401 13.8623 11.5001C13.3816 10.76 13.125 9.89002 13.125 9C13.125 7.80653 13.5859 6.66193 14.4064 5.81802C15.2269 4.97411 16.3397 4.5 17.5 4.5ZM17.5 40.5C15.3368 40.5 13.2221 39.8402 11.4235 38.604C9.62479 37.3679 8.2229 35.6109 7.39507 33.5552C6.56723 31.4995 6.35064 29.2375 6.77266 27.0552C7.19469 24.8729 8.23638 22.8684 9.76602 21.295C11.2957 19.7217 13.2445 18.6502 15.3662 18.2162C17.4879 17.7821 19.687 18.0049 21.6856 18.8564C23.6842 19.7078 25.3924 21.1498 26.5942 22.9998C27.796 24.8499 28.4375 27.025 28.4375 29.25C28.4375 32.2337 27.2852 35.0952 25.234 37.205C23.1828 39.3147 20.4008 40.5 17.5 40.5Z"
-                fill="white"/>
-            </svg>
-            <span>Conoce nuestra música</span>
-          </a>
-        </div>
-      </div>
+    <div class="block md:hidden pt-8">
+      <hr class="text-white">
     </div>
   </div>
 </div>
 
 <div class="bg-black">
-  <div class="relative max-w-7xl mx-auto px-16 lg:px-8 pt-28 pb-40">
+  <div class="relative max-w-7xl mx-auto px-16 lg:px-8 pt-10 pb-10 md:pb-40">
     <div class="flex flex-col items-center gap-y-4 pb-14">
-      <img src="assets/images/logos/logo-white.png" alt="Vibe" class="object-contain h-10">
-      <h4 class="text-white text-3xl font-medium uppercase">SERVICIOS</h4>
+      <img src="assets/images/logos/logo-white.png" alt="Vibe" class="object-contain h-8 md:h-10">
+      <h4 class="text-white text-xl md:text-3xl font-medium uppercase">SERVICIOS</h4>
     </div>
 
-    <swiper [config]="serviceCarouselConfig">
+    <swiper [config]="serviceCarouselConfig" class="hidden md:block">
       <ng-template swiperSlide>
         <a routerLink="servicios" class="image_container">
           <img src="assets/images/services/servis-04.png" alt="Servicio 04" class="object-contain w-1/4">
@@ -82,6 +118,32 @@
       </ng-template>
     </swiper>
 
+    <div class="block md:hidden flex flex-wrap justify-center items-center">
+      <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
+        <a routerLink="servicios" class="image_container">
+          <img src="assets/images/services/servis-01.png" alt="Servicio 01" class="object-contain w-full border-3 border-primary rounded-2xl">
+        </a>
+      </div>
+
+      <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
+        <a routerLink="servicios" class="image_container">
+          <img src="assets/images/services/servis-03.png" alt="Servicio 03" class="object-contain w-full border-3 border-primary rounded-2xl">
+        </a>
+      </div>
+
+      <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
+        <a routerLink="servicios" class="image_container">
+          <img src="assets/images/services/servis-02.png" alt="Servicio 02" class="object-contain w-full border-3 border-primary rounded-2xl">
+        </a>
+      </div>
+
+      <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
+        <a routerLink="servicios" class="image_container">
+          <img src="assets/images/services/servis-04.png" alt="Servicio 04" class="object-contain w-full border-3 border-primary rounded-2xl">
+        </a>
+      </div>
+    </div>
+
     <div class="pt-36">
       <hr class="text-white">
     </div>
@@ -89,19 +151,20 @@
 </div>
 
 <div class="bg-home-b__page h-full">
-  <div class="max-w-7xl mx-auto px-16 lg:px-8 pt-20 pb-40" *ngIf="artists && artists.length > 0">
+  <div class="max-w-7xl mx-auto px-16 lg:px-8 pt-20 pb-18 md:pb-40" *ngIf="artists && artists.length > 0">
     <swiper #swiperRef [config]="artistCarouselConfig">
       <ng-template swiperSlide *ngFor="let artist of artists">
         <div class="flex flex-col md:flex-row items-center gap-y-6">
           <div class="w-full md:w-1/2">
             <div class="flex flex-col items-start gap-y-4">
-              <div class="flex flex-col justify-start gap-y-2 text-7xl font-medium text-white">
-                <span>{{artist.firstName}}</span>
-                <span>{{artist.secondName}}</span>
+              <div class="flex flex-col justify-start gap-y-2 text-3xl md:text-7xl font-medium text-white">
+                <span class="block md:hidden">{{artist.firstName}} {{artist.secondName}}</span>
+                <span class="hidden md:block">{{artist.firstName}}</span>
+                <span class="hidden md:block">{{artist.secondName}}</span>
               </div>
-              <h5 class="text-white text-2xl font-medium pb-4">ARTISTA ASOCIADO | {{artist.associatedFrom}}</h5>
-              <p class="text-white text-lg w-3/4" [innerHTML]="artist.description | safe: 'html'"></p>
-              <span class="text-white text-lg font-medium" [innerHTML]="artist.phrase | safe: 'html'"></span>
+              <h5 class="text-white text-sm md:text-2xl font-medium pb-4">ARTISTA ASOCIADO | {{artist.associatedFrom}}</h5>
+              <p class="text-white text-sm md:text-lg w-full md:w-3/4" [innerHTML]="artist.description | safe: 'html'"></p>
+              <span class="text-white text-sm md:text-lg font-medium" [innerHTML]="artist.phrase | safe: 'html'"></span>
             </div>
           </div>
 
