@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Music, MusicService } from "@vibe/shared/services";
+import { Artist, ArtistService, Music, MusicService } from "@vibe/shared/services";
 
 import SwiperCore, { Autoplay, Navigation, SwiperOptions } from "swiper";
 
@@ -13,7 +13,9 @@ SwiperCore.use([Autoplay, Navigation]);
 export class DiscographyPage implements OnInit {
 
   showSingle = false;
+  showArtist = false;
   singles: any;
+  artists: Artist[] = [];
   selectedMusic: Music = {
     order: 0,
     image: '',
@@ -22,7 +24,22 @@ export class DiscographyPage implements OnInit {
     descriptions: [],
     networks: {
       spotify: '',
-      youtube: ''
+      youtube: '',
+      instagram: '',
+      tiktok: ''
+    }
+  };
+
+  selectedArtist: Artist = {
+    order: 0,
+    image: '',
+    name: '',
+    description: '',
+    networks: {
+      spotify: '',
+      youtube: '',
+      instagram: '',
+      tiktok: ''
     }
   };
 
@@ -37,8 +54,10 @@ export class DiscographyPage implements OnInit {
     }
   };
 
-  constructor(public musicService: MusicService) {
+  constructor(public musicService: MusicService,
+              private artistService: ArtistService) {
     this.getSingles();
+    this.getArtists();
   }
 
   ngOnInit(): void {
@@ -47,6 +66,10 @@ export class DiscographyPage implements OnInit {
 
   getSingles() {
     this.musicService.singles$.subscribe(res => this.singles = res);
+  }
+
+  getArtists() {
+    this.artistService.getArtists().subscribe(res => this.artists = res);
   }
 
   toggleSingle() {
@@ -66,8 +89,18 @@ export class DiscographyPage implements OnInit {
     this.selectedMusic = data;
   }
 
+  openArtistPopup(data: Artist) {
+    this.showArtist = true;
+    this.selectedArtist = data;
+  }
+
+  closeArtistsPopup() {
+    this.showArtist = false;
+  }
+
   @HostListener('window:keyup.esc') onKeyUp() {
     this.closeSingle();
+    this.closeArtistsPopup();
   }
 
 }

@@ -1,50 +1,75 @@
 [
   {
-    "firstName": "Diego",
-    "secondName": "Armando",
-    "associatedFrom": "2021 - 2022",
-    "description": "Este es el resumen de todo lo que vivimos en el concierto Renacer, estamos agradecidos con todo el que fue parte de este proyecto.",
-    "phrase": "¡Toda la gloria sea para Dios!",
-    "youtubeEmbed": "https://www.youtube.com/embed/u5V9XPeN6Cg?controls=0"
-  },
-  {
-    "firstName": "Stephie",
-    "secondName": "García",
-    "associatedFrom": "2021 - 2022",
-    "description": "Hola soy Stephie García. Dame una pluma y una hoja me véras creando poemas para aquel que sentido a mi vida dio.",
-    "phrase": "Prefiero el invierno porque trae mayor inspiración </br> ¿No lo crees?",
-    "youtubeEmbed": "https://www.youtube.com/embed/iamzEELWtAY?controls=0"
-  },
-  {
-    "firstName": "Fabrizio",
-    "secondName": "Andy",
-    "associatedFrom": "2021 - 2022",
+    "order": 1,
+    "image": "assets/images/artists/artist_01.png",
+    "alt": "Artista_01",
+    "name": "Fabrizio Andy",
     "description": "¡Hey Hola! Soy Fabrizio. </br> Mi pasión es Dios, luego la música. Podria vivir toda mi vida hablando del evangelio a traves de mis canciones.",
     "phrase": "¿Te gustaría acompañarme en este camino?",
-    "youtubeEmbed": "https://www.youtube.com/embed/ZwXJ558kwqM?controls=0"
+    "networks": {
+      "instagram": "https://www.instagram.com/fabrizio.andy/",
+      "tiktok": "https://vm.tiktok.com/ZML58y4T3/"
+    }
   },
   {
-    "firstName": "Noemí",
-    "secondName": "Cotrina",
-    "associatedFrom": "2021 - 2022",
+    "order": 2,
+    "image": "assets/images/artists/artist_02.png",
+    "alt": "Artista_02",
+    "name": "Diego Armando",
+    "description": "Este es el resumen de todo lo que vivimos en el concierto Renacer, estamos agradecidos con todo el que fue parte de este proyecto.",
+    "phrase": "¡Toda la gloria sea para Dios!",
+    "networks": {
+      "instagram": "https://www.instagram.com/diegoarmando.musica/",
+      "tiktok": "https://www.tiktok.com/@diegoarmandomusic",
+      "facebook": "https://www.facebook.com/diegoarmando.musica",
+      "web": "https://diegoarmandomusic.com"
+    }
+  },
+  {
+    "order": 3,
+    "image": "assets/images/artists/artist_03.png",
+    "alt": "Artista_03",
+    "name": "Noemí Cotrina",
     "description": "Su presencia llenará cualquier lugar donde su pueblo le adore. Soy intermediaria por medio de la música para acercar corazones al padre. Porque a Él pertenezco, soy y existo.",
     "phrase": "",
-    "youtubeEmbed": "https://www.youtube.com/embed/G9iXyVwGgoI?controls=0"
+    "networks": {
+      "instagram": "https://www.instagram.com/noemicotrina/"
+    }
   },
   {
-    "firstName": "Isaac",
-    "secondName": "Cueto",
-    "associatedFrom": "2021 - 2022",
+    "order": 4,
+    "image": "assets/images/artists/artist_04.png",
+    "alt": "Artista_04",
+    "name": "Isaac Cueto",
     "description": "Hola Soy Isaac! Mi nombre significa “el que ríe”,  Dios es la sonrisa en mi corazón y su gozo el motivo de mi canción.",
     "phrase": "¡Canta conmigo!",
-    "youtubeEmbed": "https://www.youtube.com/embed/1aPOGP55wa0?controls=0"
+    "networks": {
+      "instagram": "https://www.instagram.com/isaacueto/",
+      "facebook": "https://www.facebook.com/N3bandOfficial/"
+    }
   },
   {
-    "firstName": "Karina",
-    "secondName": "Salvatierra",
-    "associatedFrom": "2021 - 2022",
+    "order": 5,
+    "image": "assets/images/artists/artist_05.png",
+    "alt": "Artista_05",
+    "name": "Stephie García",
+    "description": "Hola soy Stephie García. Dame una pluma y una hoja me véras creando poemas para aquel que sentido a mi vida dio.",
+    "phrase": "Prefiero el invierno porque trae mayor inspiración </br> ¿No lo crees?",
+    "networks": {
+      "instagram": "https://www.instagram.com/_stephie147/",
+      "tiktok": "https://vm.tiktok.com/ZMLP3eCLN/",
+      "youtube": "https://youtube.com/channel/UCc7i499qcKLAvxJPDH-cqtw"
+    }
+  },
+  {
+    "order": 6,
+    "image": "assets/images/artists/artist_06.png",
+    "alt": "Artista_06",
+    "name": "Karina Salvatierra",
     "description": "Cantar no se trata solo de mí, se trata de nosotros, qué quiero comunicar para que nos conectemos y enseñar que esto es algo que podemos hacer todos en libertad.",
     "phrase": "",
-    "youtubeEmbed": "https://www.youtube.com/embed/D5pyJA5pahQ?controls=0"
+    "networks": {
+      "instagram": "https://www.instagram.com/karinasalvas/"
+    }
   }
 ]

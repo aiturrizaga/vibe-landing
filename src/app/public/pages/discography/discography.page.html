@@ -59,38 +59,14 @@
     <div class="flex flex-col items-center">
       <div class="flex flex-col items-center gap-y-4 pb-12">
         <img src="assets/images/logos/logo-white.png" alt="Vibe" class="object-contain h-10">
-        <h4 class="text-white text-3xl font-medium uppercase">ARTISTAS</h4>
+        <h4 class="text-white text-xl md:text-3xl font-medium uppercase">ARTISTAS</h4>
       </div>
 
       <div class="flex flex-wrap justify-center items-center pb-24 px-0 md:px-20">
-        <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-          <img src="assets/images/artists/artist_01.png" alt="Artista 01" class="object-contain w-4/5">
-          <div class="text-white text-base md:text-xl font-semibold text-center">Fabrizio Andy</div>
-        </div>
-
-        <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-          <img src="assets/images/artists/artist_02.png" alt="Artista 02" class="object-contain w-4/5">
-          <div class="text-white text-base md:text-xl font-semibold text-center">Diego Armando</div>
-        </div>
-
-        <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-          <img src="assets/images/artists/artist_03.png" alt="Artista 03" class="object-contain w-4/5">
-          <div class="text-white text-base md:text-xl font-semibold text-center">Noemí Cotrina</div>
-        </div>
-
-        <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-          <img src="assets/images/artists/artist_04.png" alt="Artista 04" class="object-contain w-4/5">
-          <div class="text-white text-base md:text-xl font-semibold text-center">Isaac Cueto</div>
-        </div>
-
-        <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-          <img src="assets/images/artists/artist_05.png" alt="Artista 05" class="object-contain w-4/5">
-          <div class="text-white text-base md:text-xl font-semibold text-center">Stephie García</div>
-        </div>
-
-        <div class="flex flex-col items-center w-full sm:w-1/2 md:w-1/3 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-          <img src="assets/images/artists/artist_06.png" alt="Artista 06" class="object-contain w-4/5">
-          <div class="text-white text-base md:text-xl font-semibold text-center">Karina Salvatierra</div>
+        <div *ngFor="let artist of artists" (click)="openArtistPopup(artist)"
+             class="cursor-pointer flex flex-col items-center w-full sm:w-1/2 md:w-1/3 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
+          <img [src]="artist.image" [alt]="artist.alt" class="object-contain w-4/5 rounded-full">
+          <div class="text-white text-base md:text-xl font-semibold text-center">{{artist.name}}</div>
         </div>
       </div>
     </div>
@@ -122,9 +98,11 @@
           <div class="flex flex-col justify-start gap-y-8 text-white">
             <div>
               <span class="hidden md:block text-lg font-medium">{{selectedMusic.name}}</span>
-              <div class="flex flex-col md:flex-row items-center pt-4 gap-y-1.5 md:gap-y-0 md:pt-0" *ngFor="let description of selectedMusic.descriptions">
+              <div class="flex flex-col md:flex-row items-center pt-4 gap-y-1.5 md:gap-y-0 md:pt-0"
+                   *ngFor="let description of selectedMusic.descriptions">
                 <span class="text-center md:text-left text-xs md:pt-0">{{description.header}}:</span>
-                <span class="text-center md:text-left text-xs font-medium md:pt-0 md:ml-1">{{description.content}}</span>
+                <span
+                  class="text-center md:text-left text-xs font-medium md:pt-0 md:ml-1">{{description.content}}</span>
               </div>
             </div>
 
@@ -149,6 +127,80 @@
                     fill="white"/>
                 </svg>
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div *ngIf="showArtist" class="w-full h-full fixed block top-0 left-0 opacity-100 z-40"
+     style="background-color: rgba(0, 0, 0, 0.5);" (click)="closeArtistsPopup()">
+
+  <div class="my-0 mx-auto block relative">
+    <div class="grid min-h-screen place-items-center">
+
+
+      <div class="relative bg-black rounded-3xl p-4 md:p-8 w-5/6 md:w-1/2">
+        <div class="absolute -right-5 md:-right-8 -top-5 md:top-1 text-white z-50">
+          <div class="flex items-end cursor-pointer" (click)="closeArtistsPopup()">
+            <svg class="ml-auto fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 18 18">
+              <path
+                d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:justify-center items-center md:items-start gap-x-6">
+          <img [src]="selectedArtist.image" [alt]="selectedArtist.alt"
+               class="object-contain w-full h-full md:w-60 md:h-60 rounded-2xl">
+          <div class="flex flex-col justify-start gap-y-8 text-white">
+            <div>
+              <div class="text-center md:text-left text-lg py-4 font-semibold">{{selectedArtist.name}}</div>
+              <div class="px-4 md:px-0">
+                <p class="text-left text-xs font-medium pb-4"
+                   [innerHTML]="selectedArtist.description | safe: 'html'"></p>
+                <span class="text-left text-xs font-medium" [innerHTML]="selectedArtist.phrase"></span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center md:items-start gap-y-2 w-full pb-4">
+              <span class="text-sm">Sígueme en</span>
+              <div class="flex justify-center items-center gap-x-4">
+                <a *ngIf="selectedArtist.networks && selectedArtist.networks.instagram"
+                   [href]="selectedArtist.networks.instagram" target="_blank"
+                   class="text-white opacity-100 md:opacity-50 hover:opacity-100">
+                  <i class="fa-brands fa-instagram text-3xl md:text-2xl"></i>
+                </a>
+
+                <a *ngIf="selectedArtist.networks && selectedArtist.networks.facebook"
+                   [href]="selectedArtist.networks.facebook" target="_blank"
+                   class="text-white opacity-100 md:opacity-50 hover:opacity-100">
+                  <i class="fa-brands fa-facebook text-2xl md:text-xl"></i>
+                </a>
+
+                <a *ngIf="selectedArtist.networks && selectedArtist.networks.tiktok"
+                   [href]="selectedArtist.networks.tiktok" target="_blank"
+                   class="text-white opacity-100 md:opacity-50 hover:opacity-100">
+                  <i class="fa-brands fa-tiktok text-2xl md:text-xl"></i>
+                </a>
+
+                <a *ngIf="selectedArtist.networks && selectedArtist.networks.youtube"
+                   [href]="selectedArtist.networks.youtube" target="_blank"
+                   class="text-white opacity-100 md:opacity-50 hover:opacity-100">
+                  <i class="fa-brands fa-youtube text-3xl md:text-2xl"></i>
+                </a>
+
+                <a *ngIf="selectedArtist.networks && selectedArtist.networks.web"
+                   [href]="selectedArtist.networks.web" target="_blank"
+                   class="text-white opacity-100 md:opacity-50 hover:opacity-100">
+                  <i class="fa-solid fa-earth-americas text-2xl md:text-xl"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>

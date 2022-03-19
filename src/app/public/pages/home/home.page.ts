@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 
 import SwiperCore, { Autoplay, Navigation, SwiperOptions } from "swiper";
-import { Artist, ArtistService, ConstantService } from "@vibe/shared/services";
+import { Staff, ArtistService, ConstantService } from "@vibe/shared/services";
 import { SwiperComponent } from "swiper/angular";
 
 SwiperCore.use([Autoplay, Navigation]);
@@ -50,7 +50,7 @@ export class HomePage implements OnInit {
 
   showVideo = false;
   selectedEmbed = '';
-  artists: Artist[] = [];
+  artists: Staff[] = [];
 
   constructor(private artistService: ArtistService,
               public constantService: ConstantService) {
@@ -62,7 +62,7 @@ export class HomePage implements OnInit {
   }
 
   getArtists() {
-    this.artistService.findAll().subscribe(
+    this.artistService.getStaff().subscribe(
       res => this.artists = res
     );
   }

@@ -12,8 +12,12 @@ export interface Music {
 }
 
 export interface SocialNetworks {
-  spotify: string;
-  youtube: string;
+  spotify?: string;
+  youtube?: string;
+  instagram?: string;
+  tiktok?: string;
+  facebook?: string;
+  web?: string;
 }
 
 export interface Description {
