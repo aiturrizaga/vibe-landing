@@ -1,5 +1,5 @@
 <div class="bg-discography__page">
-  <div class="relative max-w-7xl mx-auto px-16 lg:px-8 pt-28 pb-36">
+  <div class="relative max-w-7xl mx-auto px-8 lg:px-8 pt-28 pb-36">
     <div class="flex flex-col items-center">
       <div class="flex flex-col items-center gap-y-4 pb-14">
         <img src="assets/images/logos/logo-white.png" alt="Vibe" class="object-contain h-10">
@@ -8,10 +8,21 @@
 
       <div class="flex flex-wrap justify-center items-center pb-24">
         <button type="button" *ngFor="let single of (musicService.albums$ | async)" (click)="openPlayer(single)"
-                class="flex flex-col items-center w-full sm:w-1/2 md:w-5/12 px-1.5 py-3 md:px-8 md:py-6 gap-y-4 focus:outline-none">
-          <img [src]="single.image" [alt]="single.alt" class="object-contain image_in_zoom">
+                class="flex flex-col items-center w-1/2 sm:w-1/2 md:w-5/12 px-1.5 py-3 md:px-8 md:py-6 gap-y-4 focus:outline-none">
+          <img [src]="single.image" [alt]="single.alt" class="object-contain md:image_in_zoom"
+               (click)="openPlayer(single)">
+          <div class="block md:hidden">
+            <div class="flex justify-between items-center gap-x-2 text-white">
+              <span>Ver más</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
         </button>
       </div>
+    </div>
+
+    <div class="block md:hidden px-4 pb-20">
+      <hr class="text-white">
     </div>
 
 
@@ -21,15 +32,28 @@
         <h4 class="text-white text-3xl font-medium uppercase">SENCILLOS</h4>
       </div>
 
-      <div class="flex flex-wrap justify-center items-center pb-24">
-        <button type="button" *ngFor="let single of (musicService.singles$ | async)" (click)="openPlayer(single)"
-                class="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 px-1.5 py-3 md:px-8 md:py-6 gap-y-4 focus:outline-none">
-          <img [src]="single.image" [alt]="single.alt" class="object-contain image_in_zoom">
-        </button>
+      <div class="hidden md:block">
+        <div class="flex flex-wrap justify-center items-center pb-24">
+          <button type="button" *ngFor="let single of (musicService.singles$ | async)" (click)="openPlayer(single)"
+                  class="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 px-1.5 py-3 md:px-8 md:py-6 gap-y-4 focus:outline-none">
+            <img [src]="single.image" [alt]="single.alt" class="object-contain image_in_zoom">
+          </button>
+        </div>
+      </div>
+
+      <div class="block md:hidden" *ngIf="singles && singles.length > 0">
+        <swiper [config]="singleCarouselConfig">
+          <ng-template swiperSlide *ngFor="let single of singles">
+            <button type="button" (click)="openPlayer(single)"
+                    class="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 px-1.5 py-3 md:px-8 md:py-6 gap-y-4 focus:outline-none">
+              <img [src]="single.image" [alt]="single.alt" class="object-contain w-full">
+            </button>
+          </ng-template>
+        </swiper>
       </div>
     </div>
 
-    <div class="px-24 pb-32">
+    <div class="px-4 pt-20 md:pt-0 md:px-24 pb-32">
       <hr class="text-white">
     </div>
 

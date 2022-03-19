@@ -1,6 +1,10 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Music, MusicService } from "@vibe/shared/services";
 
+import SwiperCore, { Autoplay, Navigation, SwiperOptions } from "swiper";
+
+SwiperCore.use([Autoplay, Navigation]);
+
 @Component({
   selector: 'app-discography',
   templateUrl: './discography.page.html',
@@ -9,6 +13,7 @@ import { Music, MusicService } from "@vibe/shared/services";
 export class DiscographyPage implements OnInit {
 
   showSingle = false;
+  singles: any;
   selectedMusic: Music = {
     order: 0,
     image: '',
@@ -21,11 +26,27 @@ export class DiscographyPage implements OnInit {
     }
   };
 
+  singleCarouselConfig: SwiperOptions = {
+    loop: false,
+    slidesPerView: 'auto',
+    allowTouchMove: true,
+    navigation: false,
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false
+    }
+  };
+
   constructor(public musicService: MusicService) {
+    this.getSingles();
   }
 
   ngOnInit(): void {
     window.scroll(0, 0);
+  }
+
+  getSingles() {
+    this.musicService.singles$.subscribe(res => this.singles = res);
   }
 
   toggleSingle() {
