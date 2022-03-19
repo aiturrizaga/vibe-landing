@@ -27,7 +27,7 @@
         <a routerLink="" [routerLinkActiveOptions]="{exact: true}"
            routerLinkActive="active-nav" #homeLink="routerLinkActive"
            [ngClass]="{'opacity-50': !homeLink.isActive}"
-           class="hidden md:block text-lg text-gray-900 focus:outline-none focus:shadow-outline pb-3 hover:active-nav">
+           class="hidden md:block text-lg text-gray-900 focus:outline-none focus:shadow-outline pb-2.5 hover:active-nav">
           <svg class="h-8 w-full" viewBox="0 0 21 17" fill="white" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M12.3845 5.64742C12.0985 5.64742 11.8241 5.76657 11.6219 5.97866C11.4196 6.19076 11.306 6.47841 11.306 6.77836V10.7302C11.299 10.8831 11.3217 11.0359 11.3727 11.1793C11.4237 11.3227 11.502 11.4537 11.6027 11.5645C11.7034 11.6753 11.8245 11.7635 11.9587 11.8238C12.0929 11.884 12.2373 11.9151 12.3833 11.9151C12.5292 11.9151 12.6737 11.884 12.8079 11.8238C12.942 11.7635 13.0632 11.6753 13.1639 11.5645C13.2646 11.4537 13.3428 11.3227 13.3938 11.1793C13.4448 11.0359 13.4675 10.8831 13.4605 10.7302V6.77836C13.4605 6.47886 13.3473 6.19159 13.1455 5.97957C12.9438 5.76756 12.6701 5.6481 12.3845 5.64742ZM16.1531 1.69559C15.8677 1.69559 15.594 1.81447 15.3922 2.02608C15.1904 2.23769 15.0771 2.52469 15.0771 2.82395V14.1204C15.0771 14.4197 15.1904 14.7067 15.3922 14.9183C15.594 15.1299 15.8677 15.2488 16.1531 15.2488C16.4385 15.2488 16.7122 15.1299 16.914 14.9183C17.1158 14.7067 17.2291 14.4197 17.2291 14.1204V2.82395C17.2291 2.52469 17.1158 2.23769 16.914 2.02608C16.7122 1.81447 16.4385 1.69559 16.1531 1.69559Z"
@@ -43,7 +43,7 @@
              routerLinkActive="active-nav"
              #aboutLink="routerLinkActive"
              [ngClass]="{'opacity-50': !aboutLink.isActive}"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4 hover:active-nav">
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-3.5 hover:active-nav">
             Nosotros
           </a>
 
@@ -51,18 +51,18 @@
              routerLinkActive="active-nav"
              #serviceLink="routerLinkActive"
              [ngClass]="{'opacity-50': !serviceLink.isActive}"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4 hover:active-nav">
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-3.5 hover:active-nav">
             Servicios
           </a>
           <a routerLink="discografia"
              routerLinkActive="active-nav"
              #discLink="routerLinkActive"
              [ngClass]="{'opacity-50': !discLink.isActive}"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4 hover:active-nav">
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-3.5 hover:active-nav">
             Discografía
           </a>
           <a [href]="constantService.waLink" target="_blank"
-             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-4 opacity-50 hover:active-nav">
+             class="text-lg font-medium focus:outline-none focus:shadow-outline pb-3.5 opacity-50 hover:active-nav">
             Cotizar
           </a>
         </div>
@@ -86,7 +86,7 @@
       </nav>
 
       <div class="absolute w-full bottom-3.5 left-0">
-        <div style="height: 0.02rem" class="bg-white"></div>
+        <div style="height: 0.08rem" class="bg-white"></div>
       </div>
     </div>
   </div>

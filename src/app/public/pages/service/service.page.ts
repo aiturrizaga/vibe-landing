@@ -26,4 +26,8 @@ export class ServicePage implements OnInit {
     this.toggleBrochure();
   }
 
+  onProgress(event: any) {
+    console.log(event);
+  }
+
 }
