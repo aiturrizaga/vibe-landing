@@ -85,7 +85,7 @@
 </div>
 
 <div class="bg-black">
-  <div class="relative max-w-7xl mx-auto px-16 lg:px-8 pt-10 pb-10 md:pb-40">
+  <div class="relative max-w-7xl mx-auto px-8 lg:px-8 pt-10 pb-10 md:pb-40">
     <div class="flex flex-col items-center gap-y-4 pb-14">
       <img src="assets/images/logos/logo-white.png" alt="Vibe" class="object-contain h-8 md:h-10">
       <h4 class="text-white text-xl md:text-3xl font-medium uppercase">SERVICIOS</h4>
@@ -120,26 +120,30 @@
 
     <div class="block md:hidden flex flex-wrap justify-center items-center">
       <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-        <a routerLink="servicios" class="image_container">
+        <a routerLink="servicios" class="relative image_container">
           <img src="assets/images/services/servis-01.png" alt="Servicio 01" class="object-contain w-full border-3 border-primary rounded-2xl">
+          <span class="absolute bottom-2.5 right-0 left-0 mx-auto text-white text-sm">Estudio VIBE</span>
         </a>
       </div>
 
       <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-        <a routerLink="servicios" class="image_container">
+        <a routerLink="servicios" class="relative image_container">
           <img src="assets/images/services/servis-03.png" alt="Servicio 03" class="object-contain w-full border-3 border-primary rounded-2xl">
+          <span class="absolute bottom-2.5 right-0 left-0 mx-auto text-white text-sm">Producción Musical</span>
         </a>
       </div>
 
       <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-        <a routerLink="servicios" class="image_container">
+        <a routerLink="servicios" class="relative image_container">
           <img src="assets/images/services/servis-02.png" alt="Servicio 02" class="object-contain w-full border-3 border-primary rounded-2xl">
+          <span class="absolute bottom-2.5 right-0 left-0 mx-auto text-white text-sm">Vocal</span>
         </a>
       </div>
 
       <div class="w-1/2 px-1.5 py-3 md:px-10 md:py-6 gap-y-4">
-        <a routerLink="servicios" class="image_container">
+        <a routerLink="servicios" class="relative image_container">
           <img src="assets/images/services/servis-04.png" alt="Servicio 04" class="object-contain w-full border-3 border-primary rounded-2xl">
+          <span class="absolute bottom-2.5 right-0 left-0 mx-auto text-white text-sm">Composición</span>
         </a>
       </div>
     </div>
@@ -151,7 +155,7 @@
 </div>
 
 <div class="bg-home-b__page h-full">
-  <div class="max-w-7xl mx-auto px-16 lg:px-8 pt-20 pb-18 md:pb-40" *ngIf="artists && artists.length > 0">
+  <div class="max-w-7xl mx-auto px-16 lg:px-8 pt-20 pb-24 md:pb-40" *ngIf="artists && artists.length > 0">
     <swiper #swiperRef [config]="artistCarouselConfig">
       <ng-template swiperSlide *ngFor="let artist of artists">
         <div class="flex flex-col md:flex-row items-center gap-y-6">
@@ -191,9 +195,9 @@
 
 <div *ngIf="showVideo" class="w-full h-full fixed block top-0 left-0 opacity-100 z-40"
      style="background-color: rgba(0, 0, 0, 0.9)">
-  <div class="absolute right-52 md:right-10 top-4 text-white z-50">
+  <div class="absolute right-5 md:right-10 top-4 text-white z-50">
     <div class="flex items-end cursor-pointer" (click)="toggleVideo()">
-      <svg class="ml-auto fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg"
+      <svg class="ml-auto fill-current w-8 h-8 md:w-6 md:h-6" xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 18 18">
         <path
           d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/>
@@ -203,7 +207,7 @@
 
   <div class="my-0 mx-auto block relative">
     <div class="grid min-h-screen place-items-center">
-      <iframe width="750" height="450" [src]="selectedEmbed | safe: 'resourceUrl'"
+      <iframe class="h-80 w-full" [src]="selectedEmbed | safe: 'resourceUrl'"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
     </div>
