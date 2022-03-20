@@ -97,7 +97,7 @@
 
 
 <div *ngIf="showBrochure" class="w-full h-full fixed block top-0 left-0 opacity-100 z-40"
-     style="background-color: rgba(0, 0, 0, 0.9)">
+     style="background-color: rgba(0, 0, 0, 0.6)">
   <div class="absolute right-5 md:right-10 top-4 text-white z-50">
     <div class="flex items-end cursor-pointer" (click)="toggleBrochure()">
       <svg class="ml-auto fill-current w-8 h-8 md:w-6 md:h-6" xmlns="http://www.w3.org/2000/svg"
@@ -110,11 +110,7 @@
 
   <div class="my-0 mx-auto block relative">
     <div class="grid min-h-screen place-items-center">
-      <pdf-viewer [src]="pdfSrc"
-                  [render-text]="true"
-                  [original-size]="false"
-                  style="width: 400px; height: 1000px"
-      ></pdf-viewer>
+      <iframe [src]="pdfSrc | safe: 'resourceUrl'" class="p-8 w-1/2 h-full"></iframe>
     </div>
   </div>
 
